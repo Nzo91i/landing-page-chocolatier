@@ -39,14 +39,22 @@ section {
   padding: 60px 8%;
 }
 
+/* ===== Boutons ===== */
 .bouton {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   padding: 12px 28px;
   border-radius: 30px;
   border: 2px solid var(--principale);
-  cursor: default;
-  pointer-events: none; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+              border-color 0.3s ease, transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.bouton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(107, 62, 46, 0.35);
 }
 
 .bouton-principal {
@@ -54,10 +62,21 @@ section {
   color: var(--texte);
 }
 
+.bouton-principal:hover {
+  background-color: var(--secondaire);
+  border-color: var(--secondaire);
+  color: var(--fond);
+}
+
 .bouton-secondaire {
   background-color: transparent;
   color: var(--secondaire);
   border-color: var(--secondaire);
+}
+
+.bouton-secondaire:hover {
+  background-color: var(--secondaire);
+  color: var(--fond);
 }
 
 .menu {
@@ -74,13 +93,19 @@ section {
 
 .menu nav span {
   margin-left: 25px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .menu-contact {
   background-color: var(--principale);
   padding: 8px 18px;
   border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-contact:hover {
+  background-color: var(--secondaire);
+  color: var(--fond);
 }
 
 .hero {
@@ -104,6 +129,12 @@ section {
 .hero .bouton-secondaire {
   color: var(--fond);
   border-color: var(--fond);
+}
+
+.hero .bouton-secondaire:hover {
+  background-color: var(--fond);
+  border-color: var(--fond);
+  color: var(--secondaire);
 }
 
 .slogan {
@@ -311,6 +342,7 @@ footer {
     display: none;
   }
 }
+
 html, body {
   overflow-x: hidden;
 }

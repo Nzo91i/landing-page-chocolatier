@@ -196,7 +196,8 @@
     AOS.init({
       duration: 800,      // durée de l'animation (ms)
       easing: 'ease-out', // type d'accélération
-      once: true,         // animation jouée une seule fois
+      once: false,        // l'animation se rejoue à chaque passage
+      mirror: true,       // l'animation se joue aussi en remontant
       offset: 100         // déclenchement 100px avant l'entrée à l'écran
     });
   </script>
